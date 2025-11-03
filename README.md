@@ -40,3 +40,38 @@ Follow these steps to run the dashboard on your local machine.
 ```bash
 git clone [https://github.com/harshvardhan178251/nuclear-dashboard.git](https://github.com/harshvardhan178251/nuclear-dashboard.git)
 cd nuclear-dashboard
+2. Create and Activate a Virtual Environment
+Bash
+
+# Create the environment
+python -m venv venv
+
+# Activate on Windows
+.\venv\Scripts\activate
+
+# Activate on macOS/Linux
+source venv/bin/activate
+3. Install Dependencies
+Install all required libraries from the requirements.txt file.
+
+Bash
+
+pip install -r requirements.txt
+4. Prepare the Data
+(You only need to do this step once)
+
+This script creates the sensor_data.csv file used by the dashboard.
+
+Bash
+
+python generate_data.py
+(Note for Week 2+: You would also add python train_model.py here to train the AI).
+
+5. Run the Dashboard
+Bash
+
+python app.py
+The dashboard will now be running at: https://www.google.com/search?q=http://127.0.0.1:8050/
+
+📊 Data Source
+The AI model for RUL prediction was trained using the NASA C-MAPSS Turbofan Jet Engine Data Set.
